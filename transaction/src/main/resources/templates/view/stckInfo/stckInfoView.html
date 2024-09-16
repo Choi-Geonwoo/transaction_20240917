@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"  >
+    <title>주식정보</title>		
+	<link rel="stylesheet" type="text/css" th:href="@{/CSS/stckInfo/stckInfo.css}">
+	<style>
+
+	</style>
+</head>
+<body>
+	<h4>주식정보</h4>
+	
+	<div class="button-container">
+	   <button onclick="register()">등록</button>
+	   <input type="text" id="search-box" placeholder="검색어 입력">
+	   <button onclick="search()">검색</button>
+	   <button onclick="downloadExcel()">엑셀다운로드</button>
+	</div>
+	<p th:text="${stckInfoSelect}"></p>
+	<table>
+	   <thead>
+	       <tr>
+	           <th>티커</th>
+	           <th>주식명</th>
+	           <th>주기</th>
+	           <th>배당금</th>
+	           <th>사용여부</th>
+	           <th>삭제여부</th>
+	           <th>버전</th>
+	           <th>등록일자</th>
+	           <th>수정일자</th>
+	       </tr>
+	   </thead>
+	   <tbody>
+	       <tr>
+	           <td>DKNG</td>
+	           <td>드래프트킹스(DKNG)</td>
+	           <td>0</td>
+	           <td>0</td>
+	           <td>0</td>
+	           <td>0</td>
+	           <td>0</td>
+	           <td></td>
+	           <td></td>
+	       </tr>
+	       <!-- Remaining rows omitted for brevity -->
+	   </tbody>
+	</table>
+</body>
+</html>
